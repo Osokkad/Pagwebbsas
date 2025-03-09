@@ -1,0 +1,158 @@
+/* Si es una imagen */
+.navbar-icon img {
+    width: 20px;  /* Ajusta este valor según necesites */
+    height: auto; /* Ajusta este valor según necesites */
+}
+
+/* Si es un ícono de font-awesome o similar */
+.navbar-icon i {
+    font-size: 24px; /* Ajusta este valor según necesites */
+}
+
+/* Si es un SVG */
+.navbar-icon svg {
+    width: 32px;  /* Ajusta este valor según necesites */
+    height: 32px; /* Ajusta este valor según necesites */
+}
+
+.background-hero {
+    position: relative; /* Necesario para que el ::before funcione correctamente */
+    background-image: url("/assets/img/04229cb8-b9c8-4c25-84e1-c792a0063c49.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.background-hero::before {
+    content: ""; /* Necesario para que el pseudo-elemento se muestre */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.952); /* Negro con 50% de opacidad */
+    z-index: 1; /* Coloca la capa detrás del contenido */
+}
+
+
+/* Fondo del navbar al estar en la parte superior (negro puro) */
+.Background-navbar {
+    transition: background-color 0.3s ease; /* Agrega una transición suave */
+    backdrop-filter: blur(10px); /* Efecto de desenfoque en el fondo */
+    -webkit-backdrop-filter: blur(10px); /* Para compatibilidad con Safari */
+}
+
+
+/* Fondo del navbar cuando se hace scroll */
+.Background-navbar-scrolled {
+    background-color: rgb(0, 0, 0); /* Fondo negro con algo de transparencia */
+    transition: background-color 0.3s ease; /* Agrega una transición suave */
+}
+
+
+.background-hero {
+    position: relative;
+    background-image: url("/assets/img/04229cb8-b9c8-4c25-84e1-c792a0063c49.jfif");
+    background-size: cover;
+    background-position: center;
+}
+
+.background-hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.616);
+    z-index: 1;
+}
+
+.typing-effect {
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 3px solid white;
+    animation: typing 6s steps(19) infinite, blink 0.75s step-end infinite;
+}
+
+@keyframes typing {
+    0% { width: 0; }
+    50% { width: 100%; }
+    100% { width: 0; }
+}
+
+@keyframes blink {
+    from, to { border-color: transparent; }
+    50% { border-color: white; }
+}
+
+.background-seccion-about {
+    background-color: #000000;
+}
+
+.background-contact {
+    background-image: url("/assets/img/gta-vi-grand-theft-auto-6_3440x1440_xtrafondos.com.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+
+/* Limitar la altura del menú móvil */
+#mobile-menu {
+    max-height: 100vh; /* Limita la altura al 100% de la ventana */ /* Permite scroll solo si el contenido es muy largo */
+    background-color: black;
+}
+
+#mobile-menu .flex.items-center.justify-between {
+    display: flex;
+    justify-content: space-between; /* Asegura que el logo y el botón de cierre se distribuyan correctamente */
+    align-items: center; /* Centra el contenido verticalmente */
+    
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+.card-hover {
+    position: relative;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .card-hover i {
+    transition: all 0.3s ease-in-out; /* Suaviza la animación para el icono */
+    border: 4px solid transparent; /* Inicializa el borde como transparente */
+    border-radius: 50%; /* Redondea el borde incluso en el estado normal */
+    padding: 10px; /* Espacio alrededor del ícono */
+  }
+  
+  .card-hover:hover i {
+    border: 4px solid white; /* Aplica el borde blanco en hover */
+    transition: all 0.3s ease-in-out; /* Suaviza la animación */
+  }
+  
+
+  #modal {
+    display: none; /* Inicialmente la ventana modal está oculta */
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro semitransparente */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  
+  button {
+    cursor: pointer;
+  }
+
+  /* Mueve la imagen derecha hacia abajo */
+  .image-right {
+    margin-top: -80px; /* Ajusta este valor a lo que necesites */
+  }
